@@ -1,0 +1,67 @@
+\documentclass[a4paper]{article}
+
+\usepackage{color}
+\usepackage{url}
+\usepackage[T2A]{fontenc} % enable Cyrillic fonts
+\usepackage[utf8]{inputenc} % make weird characters work
+\usepackage{graphicx}
+
+\usepackage[english,serbian]{babel}
+
+\usepackage[unicode]{hyperref}
+\hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
+
+\newtheorem{primer}{Primer}[section]
+
+\begin{document}
+
+\title{DALL E 2 - OpenAI\\ \small{Seminarski rad u okviru kursa\\Tehničko i naučno pisanje\\ Matematički fakultet}}
+
+\author{Ognjen Marković\\ ognjen.mark03@gmail.com\\ Matija Milovanović\\ matija.milovanovic55@gmail.com\\ Bogdan Milovanović\\ email\\ Bojana Radovanović\\ bojanaradovanovic080@gmail.com }
+\date{11.~novembar 2022.}
+\maketitle
+
+\abstract{
+DALL-E I DALL-E 2 su modeli mašinskog učenja koje je razvio OpenAI za generisanje digitalnih
+slika pomoću opisa koje dobija od NLP - a, koji se nazivaju „ prompts “. DALL-E je prvi put
+spomenut na blogu OpenAi-a u januaru 2021. i tada je koristio verziju GPT-3 modifikovanu za
+generisanje slika. U aprilu 2022. OpenAI je najavio DALL-E 2, naslednika dizajniranog da
+generiše realističnije slike u višim rezolucijama koje mogu kombinovati koncepte, atribute i
+stilove. Naziv softvera je sastavni deo imena animiranog robota Pikar lika VALL-E i španskog
+nadrealističkog umetnika Salvadora Dalija.}
+
+\tableofcontents
+
+\newpage
+
+\section{Uvod}
+\label{sec:uvod}
+OpenAI je istraživačka laboratorija za veštačku inteligenciju (AI) koju čine profitna korporacija OpenAI LP I njena matična kompanija, neprofitna OpenAI Inc. Kompanija, koja se smatra konkurentom DeepMindu, sprovodi istraživanja u oblasti veštačke inteligencije sa navedenim ciljem promovisanja i razvoja prijateljske veštačke inteligencije na način koji koristi čovečanstvu u celini. Organizaciju su osnovali u San Francisku krajem 2015. Ilon Mask, Sem Altman I drugi, koji su zajednički obecá li milijardu dolara. Mask je podneo ostavku iz odbora u februaru 2018, ali je ostao donator. U 2019, OpenAI LP je od Microsofta dobio investiciju od milijardu dolara. Neki naučnici, poput Stivena Hokinga i Stjuarta Rasela, izrazili su zabrinutost da ako napredna veštačka inteligencija jednog dana dobije sposobnost da se redizajnira sve vecó m brzinom, nezaustavljiva „eksplozija inteligencije“ može dovesti do izumiranja ljudi. Mask karakteriše veštačku inteligenciju kao „najvecú egzistencijalnu pretnju čovečanstva“. Osnivači OpenAI su je strukturisali kao neprofitnu organizaciju kako bi mogli da fokusiraju svoje istraživanje na stvaranjepozitivnog dugoročnog uticaja na ljude.
+
+
+
+\section{DALL-E 2}
+\label{DALLE2}
+\subsection{Tehnologija}
+\label{subsec:tehnologija}
+
+Model generativnog unapred obučenog transformatora (GPT) je prvobitno razvio OpenAI 2018. godine, koristecí arhitekturu transformatora. Prva iteracija, GPT, je povecá na da bi proizvela GPT-2 2019. godine; 2020. ponovo je povecá na da bi proizvela GPT-3, sa 175 milijardi parametara. DALL-E-ov model je multimodalna implementacija GPT-3 sa 12 milijardi parametara koji „zamenjuje tekst za piksele“, obučen na parovima tekst-slika sa Interneta. DALL-E 2 koristi 3,5 milijardi parametara, što je manji broj od svog prethodnika.
+
+
+
+\begin{table}[h!]
+\begin{center}
+\caption{U tabeli \ref{tab:tabela1} je prikazan hronološki razvitak DALL-E 2.} 
+\vspace{0.5cm}
+\begin{tabular}{|c|c|c|c|c|} \hline
+2018&2019&2020&2021&2022\\ \hline
+GPT&GPT-2&GPT-3 &DALL-E&DALL-E 2\\ \hline
+\end{tabular}
+\label{tab:tabela1}
+\end{center}
+\end{table}
+
+DALL-E je razvijen i objavljen javnosti u saradnji sa CLIP-om (Pre-trening za kontrastni jezik). CLIP je poseban model zasnovan na učenju nulte slike koji je obučen na 400 miliona parova slika sa tekstualnim natpisima prebačenim sa interneta. Njegova uloga je da „razume i rangira“ DALL-E-ov izlaz predviđanjem koji je naslov sa liste od 32.768 naslova nasumično odabranih iz skupa podataka (od kojih je jedan bio tačan odgovor) najprikladniji za sliku. Ovaj model se koristi za filtriranje vecé početne liste slika koje generiše DALL-E da bi se odabrali najprikladniji rezultati. DALL-E 2 koristi model difuzije uslovljen ugrađivanjem CLIP slika, koje se, tokom zaključivanja, generišu iz CLIP ugrađivanja teksta od strane prethodnog modela. Kad bi smo pojednostavili stvari, ovaj model funkcioniše tako što počinje sa slikom koja se sastoji od nasumičnih piksela („šum“) i postepeno „uklanja šum“ slike. Tokom procesa uklanjanja
+šuma, on se vodi ka slici koja odgovara početnom izvornom promptu.
+
+\end{document}
