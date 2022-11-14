@@ -1,26 +1,18 @@
 \documentclass[a4paper]{article}
-
 \usepackage{color}
 \usepackage{url}
 \usepackage[T2A]{fontenc} % enable Cyrillic fonts
 \usepackage[utf8]{inputenc} % make weird characters work
 \usepackage{graphicx}
-
 \usepackage[english,serbian]{babel}
-
 \usepackage[unicode]{hyperref}
 \hypersetup{colorlinks,citecolor=green,filecolor=green,linkcolor=blue,urlcolor=blue}
-
 \newtheorem{primer}{Primer}[section]
-
 \begin{document}
-
 \title{DALL E 2 - OpenAI\\ \small{Seminarski rad u okviru kursa\\Tehničko i naučno pisanje\\ Matematički fakultet}}
-
-\author{Ognjen Marković\\ ognjen.mark03@gmail.com\\ Matija Milovanović\\ matija.milovanovic55@gmail.com\\ Bogdan Milovanović\\ email\\ Bojana Radovanović\\ bojanaradovanovic080@gmail.com }
+\author{Ognjen Marković\\ ognjen.mark03@gmail.com\\ Matija Milovanović\\ matija.milovanovic55@gmail.com\\ Bogdan Milovanović\\ bogdan.milovanovic1106@gmail.com\\ Bojana Radovanović\\ bojanaradovanovic080@gmail.com }
 \date{11.~novembar 2022.}
 \maketitle
-
 \abstract{
 DALL-E I DALL-E 2 su modeli mašinskog učenja koje je razvio OpenAI za generisanje digitalnih
 slika pomoću opisa koje dobija od NLP - a, koji se nazivaju „ prompts “. DALL-E je prvi put
@@ -29,26 +21,21 @@ generisanje slika. U aprilu 2022. OpenAI je najavio DALL-E 2, naslednika dizajni
 generiše realističnije slike u višim rezolucijama koje mogu kombinovati koncepte, atribute i
 stilove. Naziv softvera je sastavni deo imena animiranog robota Pikar lika VALL-E i španskog
 nadrealističkog umetnika Salvadora Dalija.}
-
 \tableofcontents
-
 \newpage
-
 \section{Uvod}
 \label{sec:uvod}
 OpenAI je istraživačka laboratorija za veštačku inteligenciju (AI) koju čine profitna korporacija OpenAI LP I njena matična kompanija, neprofitna OpenAI Inc. Kompanija, koja se smatra konkurentom DeepMindu, sprovodi istraživanja u oblasti veštačke inteligencije sa navedenim ciljem promovisanja i razvoja prijateljske veštačke inteligencije na način koji koristi čovečanstvu u celini. Organizaciju su osnovali u San Francisku krajem 2015. Ilon Mask, Sem Altman I drugi, koji su zajednički obecá li milijardu dolara. Mask je podneo ostavku iz odbora u februaru 2018, ali je ostao donator. U 2019, OpenAI LP je od Microsofta dobio investiciju od milijardu dolara. Neki naučnici, poput Stivena Hokinga i Stjuarta Rasela, izrazili su zabrinutost da ako napredna veštačka inteligencija jednog dana dobije sposobnost da se redizajnira sve vecó m brzinom, nezaustavljiva „eksplozija inteligencije“ može dovesti do izumiranja ljudi. Mask karakteriše veštačku inteligenciju kao „najvecú egzistencijalnu pretnju čovečanstva“. Osnivači OpenAI su je strukturisali kao neprofitnu organizaciju kako bi mogli da fokusiraju svoje istraživanje na stvaranjepozitivnog dugoročnog uticaja na ljude.
-
-
-
+\section{Veštačka inteligencija}
+\label{Veštačka inteligencija}
+Veštačka inteligencija jedna je od retkih oblasti nauke o kojoj skoro svi– i eksperti i oni koji to nisu - imaju neki stav. Neko smatra da ona donosi velike koristi, neko smatra da od nje prete opasnosti, a neko veruje i u jedno i u drugo. Neobično je onda da, s druge strane, ne postoji opšta saglasnost o tome šta je uopšte veštačka inteligencija i čime se ona bavi. Pod inteligencijom se obično podrazumeva sposobnost usvajanja, pamćenja i obrade određenih znanja. Iako postoji i shvatanje po kojem je centralni cilj veštačke inteligencije oponašanje ljudske inteligencije, većina podoblasti veštačke inteligencije ima drugačiji cilj. Obično je to rešavanje problema u kojima se javlja kombinatorna eksplozija, tj. u kojima je broj mogućnosti toliko veliki da se ne može sistematično ispitati u razumnom vremenu. Najveći deo zadataka veštačke inteligencije može se opisati u terminima algoritmike, pretrage, deduktivnog i induktivnog zaključivanja, i drugih preciznih matematičkih pojmova. Tek mali deo istraživača bavi se metodama koje pretenduju da dostignu opšte rasuđivanje u stilu čoveka. Veštačka inteligencija sastoji se od više podoblasti, naizgled slabo povezanih svojim sadržajem. Pitanje je onda šta je to zajedničko za njih, sem to što se uglavnom sve bave problemima u kojima se javlja mnoštvo mogućnosti koje se ne mogu ispitati sistematičnom pretragom. Termin "veštačka inteligencija" je ranije korišcén za opisivanje mašina koje oponašaju i prikazuju ljudske kognitivne veštine koje su povezane sa ljudskim umom, kao što su učenje i rešavanje problema. Ovu definiciju su od tada odbacili glavni istraživači AI koji sada opisuju AI u smislu racionalnosti i racionalnog delovanja, što ne ograničava način na koji se inteligencija može artikulisati.
+\newpage
+Primena veštačke inteligencije je jako široka I ona uključuje napredne veb pretraživače (npr. Google), sisteme za preporuke (koje koriste IouTube, Amazon i Netflik), razumevanje ljudskog govora (kao što su Siri i Aleka), automobile koji se samostalno voze (npr. Tesla), automatizovano donošenje odluka i takmičenje na najvišem nivou u sistemima strateških igara (kao što su šah i Go). Kako mašine postaju sve sposobnije, zadaci za koje se smatra da zahtevaju „inteligenciju“ često se uklanjaju iz definicije veštačke inteligencije. Takođe prisutna je još jedna oblast veštačke inteligencije koje će nama biti jako interesantna, a to je NLP(Natural Language Processing). Ona se bavi interakcijom između računara i ljudskog jezika, posebno kako programirati računare da obrađuju i analiziraju velike količine podataka na “Natural Language”- u. Cilj NLP-a je da kompjuter razume sadržaj dokumenata, uključujući kontekstualne nijanse jezika u njima. Tehnologija tada može precizno da izdvoji informacije i uvide sadržane u dokumentima, kao i da kategorizuje i organizuje same dokumente.
 \section{DALL-E 2}
 \label{DALLE2}
 \subsection{Tehnologija}
 \label{subsec:tehnologija}
-
 Model generativnog unapred obučenog transformatora (GPT) je prvobitno razvio OpenAI 2018. godine, koristecí arhitekturu transformatora. Prva iteracija, GPT, je povecá na da bi proizvela GPT-2 2019. godine; 2020. ponovo je povecá na da bi proizvela GPT-3, sa 175 milijardi parametara. DALL-E-ov model je multimodalna implementacija GPT-3 sa 12 milijardi parametara koji „zamenjuje tekst za piksele“, obučen na parovima tekst-slika sa Interneta. DALL-E 2 koristi 3,5 milijardi parametara, što je manji broj od svog prethodnika.
-
-
-
 \begin{table}[h!]
 \begin{center}
 \caption{U tabeli \ref{tab:tabela1} je prikazan hronološki razvitak DALL-E 2.} 
@@ -60,11 +47,10 @@ GPT&GPT-2&GPT-3 &DALL-E&DALL-E 2\\ \hline
 \label{tab:tabela1}
 \end{center}
 \end{table}
-
 DALL-E je razvijen i objavljen javnosti u saradnji sa CLIP-om (Pre-trening za kontrastni jezik). CLIP je poseban model zasnovan na učenju nulte slike koji je obučen na 400 miliona parova slika sa tekstualnim natpisima prebačenim sa interneta. Njegova uloga je da „razume i rangira“ DALL-E-ov izlaz predviđanjem koji je naslov sa liste od 32.768 naslova nasumično odabranih iz skupa podataka (od kojih je jedan bio tačan odgovor) najprikladniji za sliku. Ovaj model se koristi za filtriranje vecé početne liste slika koje generiše DALL-E da bi se odabrali najprikladniji rezultati. DALL-E 2 koristi model difuzije uslovljen ugrađivanjem CLIP slika, koje se, tokom zaključivanja, generišu iz CLIP ugrađivanja teksta od strane prethodnog modela. Kad bi smo pojednostavili stvari, ovaj model funkcioniše tako što počinje sa slikom koja se sastoji od nasumičnih piksela („šum“) i postepeno „uklanja šum“ slike. Tokom procesa uklanjanja
 šuma, on se vodi ka slici koja odgovara početnom izvornom promptu.
 
-\end{document}
+
 
 \subsection{Mogućnosti}
 \label{subsec:mogućnosti}
@@ -120,3 +106,15 @@ Neki od zanimljivijih nemogućih slika su:\ref{fig:astronaut} “Astronaut koji 
 \end{center}
 \label{fig:hamburger}
 \end{figure}
+\newpage
+\subsection{Etički problemi}
+\label{subsec: Etički problemi}
+Oslanjanje DALL-E 2 na javne skupove podataka utiče na njegove rezultate i dovodi do algoritamske pristrasnosti u nekim slučajevima, kao što je generisanje vecé g broja muškaraca nego žena za zahteve koji ne pominju pol. Podaci o obuci DALL-E 2 su filtrirani kako bi se uklonile nasilne i seksualne slike, ali je utvrđeno da to povecá va pristrasnost u nekim slučajevima, kao što je smanjenje učestalosti generisanja žena. OpenAI pretpostavlja da je to možda zato što je vecá verovatnocá da c é žene biti seksualizovane u podacima o obuci, što je uzrokovalo da filter utiče na rezultate. U septembru 2022., OpenAI je potvrdio za The Verge da DALL-E nevidljivo ubacuje fraze u korisničke upite kako bi se pozabavio pristrasnošcú u rezultatima; na primer, „crnac“ i „azijska žena“ se ubacuju u upite koji ne navode pol ili rasu.
+
+Zabrinutost u vezi sa DALL-E 2 i sličnim modelima za generisanje slika je da bi se oni mogli koristiti za propagiranje dubokih fejkova i drugih oblika dezinformacija. Kao pokušaj da se ovo ublaži, softver odbija pozive koji uključuju javne ličnosti i otpremanja koja sadrže ljudska lica. Upiti koji sadrže potencijalno nepoželjan sadržaj se blokiraju, a otpremljene slike se analiziraju kako bi se otkrio uvredljiv materijal. Nedostatak filtriranja zasnovanog na promptu je to što ga je lako zaobicí upotrebom alternativnih fraza  koje rezultiraju sličnim izlazom. Na primer, reč „krv“ je filtrirana, ali „kečap“ i „crvena tečnost“ nisu.
+
+Još jedna zabrinutost u vezi sa DALLE-2 i sličnim modelima je da bi mogli da izazovu tehnološku  nezaposlenost za umetnike, fotografe i grafičke dizajnere zbog svoje tačnosti i popularnosti.
+
+
+
+\end{document}
